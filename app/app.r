@@ -105,7 +105,7 @@ ui = shinyUI(navbarPage(title = "Mk",
 )
 )
 
-resultados = read.xlsx("E:\\1 - Estudos\\1 - Projetos\\Hobby\\Futebol\\FutebolPoissonExcel\\Poisson Brasileiro.xlsx",sheet = "BRA")
+resultados = read_csv2("https://raw.githubusercontent.com/mranjos/ShinyApp/master/app/database.csv") %>% data.frame()
 
 server = shinyServer(function(input,output){
   
